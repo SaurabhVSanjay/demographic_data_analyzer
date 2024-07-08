@@ -1,15 +1,9 @@
-# main.py
-from mean_var_std import calculate
+# This entrypoint file to be used in development. Start by reading README.md
+import demographic_data_analyzer
+from unittest import main
 
-def main():
-    try:
-        data = [0, 1, 2, 3, 4, 5, 6, 7, 8]
-        result = calculate(data)
-        
-        for key, value in result.items():
-            print(f"{key}: {value}")
-    except ValueError as e:
-        print(e)
+# Test your function by calling it here
+demographic_data_analyzer.calculate_demographic_data()
 
-if __name__ == "__main__":
-    main()
+# Run unit tests automatically
+main(module='test_module', exit=False)
